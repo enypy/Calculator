@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native'
+import Input from './Components/Input'
+import Output from './Components/Output'
+import Colors from './Libs/Colors'
+import { AlgebraicExpProvider } from './Context/AlgebraicExpContext'
+
+
 
 export default function App() {
+
+  console.log(Number('-05.564'))
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <AlgebraicExpProvider>
+      <SafeAreaView style={styles.container}>
+        <Input />
+        <Output />
+      </SafeAreaView>
+    </AlgebraicExpProvider>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    backgroundColor: Colors.BLACK,
+    display: 'flex',
+    flexDirection: 'column-reverse'
+  }
+})
