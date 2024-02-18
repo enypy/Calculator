@@ -38,8 +38,9 @@ export default function Input(): React.JSX.Element {
             <Button text={2} />
             <Button text={3} />
             <Button text={'+'} btnColor={Colors.YELLOW} />
-            <Button text={0} isBig={true} />
+            <Button text={0}  />
             <Button text={'.'} />
+            <Button text={'⌫'}  />
             <Button text={'='} btnColor={Colors.YELLOW} />
         </View>
     )

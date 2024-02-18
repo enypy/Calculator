@@ -17,7 +17,7 @@ export default function Output(): React.JSX.Element {
             paddingHorizontal: screenWidth * 0.04,
         }
     })
-    console.log(algebraicExp)
+
     return (
         <Text style={styles.txt}>{(algebraicExp.currentExp === '') ? '0' : algebraicExp.currentExp}</Text>
     )
