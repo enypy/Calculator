@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 export default function Button({ text, btnColor, txtColor, isBig = false, icon=false }: ButtonParams): React.JSX.Element {
     const buttonSize = Dimensions.get('window').width * 0.20
 
-    const { dispatch } = useContext(AlgebraicExpContext)
+    const { dispatch } = useContext<any>(AlgebraicExpContext)
 
     const styles = StyleSheet.create({
         btn: {

@@ -7,7 +7,10 @@ import { AlgebraicExpContext } from '../Context/AlgebraicExpContext'
 export default function ExpPreview() {
     const { algebraicExp } = useContext<any>(AlgebraicExpContext)
 
-    const prettierExp = algebraicExp.exp.replace('/', '÷').replace('*', '×').replace('-', '−')
+    const prettierExp = algebraicExp.exp
+        .replaceAll('/', '÷')
+        .replaceAll('*', '×')
+        .replaceAll('-', '−')
 
     const screenWidth = Dimensions.get('window').width
 
