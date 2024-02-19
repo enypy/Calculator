@@ -5,7 +5,7 @@ import { AlgebraicExpContext } from '../Context/AlgebraicExpContext'
 
 
 export default function ExpPreview() {
-    const { algebraicExp } = useContext(AlgebraicExpContext)
+    const { algebraicExp } = useContext<any>(AlgebraicExpContext)
 
     const prettierExp = algebraicExp.exp.replace('/', '÷').replace('*', '×').replace('-', '−')
 

@@ -1,5 +1,5 @@
-import React, { createContext, useReducer } from "react";
-import Toast from "react-native-root-toast";
+import React, { createContext, useReducer } from "react"
+import Toast from "react-native-root-toast"
 
 const AlgebraicExpContext = createContext(null)
 
@@ -84,8 +84,6 @@ function manageAlgebraicExp(state, action) {
         }
         return false
     }
-
-
 
     if (arithmeticOperators.includes(payload)) {
         if (state.exp.length <= 0 && state.currentExp.length <= 0) {
@@ -176,7 +174,6 @@ function manageAlgebraicExp(state, action) {
         state.exp = ''
     }
 
-    console.log(state)
     return { ...state }
 }
 

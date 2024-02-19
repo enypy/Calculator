@@ -3,5 +3,5 @@ type ButtonParams = {
     btnColor?: string,
     txtColor?: string,
     isBig?: boolean,
-    icon?: string | boolean
+    icon?: GLYPHS | boolean
 }

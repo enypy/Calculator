@@ -1,8 +1,8 @@
-import { Text, TouchableHighlight, StyleSheet, View, Dimensions, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, View, Dimensions, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
 import Colors from '../Libs/Colors'
 import { AlgebraicExpContext } from '../Context/AlgebraicExpContext'
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 
 export default function Button({ text, btnColor, txtColor, isBig = false, icon=false }: ButtonParams): React.JSX.Element {
