@@ -18,7 +18,7 @@ export default function Output(): React.JSX.Element {
         txt: {
             color: Colors.WHITE,
             textAlign: 'right',
-            fontSize: 999,
+            fontSize: 333,
             paddingHorizontal: screenWidth * 0.04,
         }
     })
