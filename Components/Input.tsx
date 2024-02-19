@@ -1,7 +1,7 @@
-import React from "react";
-import { Dimensions, StyleSheet, View } from "react-native";
-import Button from "./Button";
-import Colors from "../Libs/Colors";
+import React from "react"
+import { Dimensions, StyleSheet, View } from "react-native"
+import Button from "./Button"
+import Colors from "../Libs/Colors"
 
 
 export default function Input(): React.JSX.Element {
@@ -23,7 +23,7 @@ export default function Input(): React.JSX.Element {
     return (
         <View style={styles.container}>
             <Button text={'AC'} btnColor={Colors.LIGHT_GRAY} txtColor={Colors.BLACK} />
-            <Button text={'±'} btnColor={Colors.LIGHT_GRAY} txtColor={Colors.BLACK} />
+            <Button text={'±'} btnColor={Colors.LIGHT_GRAY} txtColor={Colors.BLACK} icon={'plus-minus-variant'}/>
             <Button text={'%'} btnColor={Colors.LIGHT_GRAY} txtColor={Colors.BLACK} />
             <Button text={'÷'} btnColor={Colors.YELLOW} />
             <Button text={7} />
@@ -40,7 +40,7 @@ export default function Input(): React.JSX.Element {
             <Button text={'+'} btnColor={Colors.YELLOW} />
             <Button text={0}  />
             <Button text={'.'} />
-            <Button text={'⌫'}  />
+            <Button text={'⌫'} icon={'backspace'} />
             <Button text={'='} btnColor={Colors.YELLOW} />
         </View>
     )

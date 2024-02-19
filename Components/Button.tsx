@@ -2,9 +2,10 @@ import { Text, TouchableHighlight, StyleSheet, View, Dimensions, TouchableOpacit
 import React, { useContext } from 'react'
 import Colors from '../Libs/Colors'
 import { AlgebraicExpContext } from '../Context/AlgebraicExpContext'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-export default function Button({ text, btnColor, txtColor, isBig = false }: ButtonParams): React.JSX.Element {
+export default function Button({ text, btnColor, txtColor, isBig = false, icon=false }: ButtonParams): React.JSX.Element {
     const buttonSize = Dimensions.get('window').width * 0.20
 
     const { dispatch } = useContext(AlgebraicExpContext)
@@ -31,7 +32,7 @@ export default function Button({ text, btnColor, txtColor, isBig = false }: Butt
     return (
         <TouchableOpacity onPress={() => { dispatch({ payload: text }) }}>
             <View style={styles.btn}>
-                <Text style={styles.txt}>{text}</Text>
+                {icon ?  <MaterialCommunityIcons name={icon} color={txtColor ?? Colors.WHITE} size={styles.txt.fontSize / 1.3} /> : <Text style={styles.txt}>{text}</Text>}
                 {isBig && <Text style={{ ...styles.txt, color: 'transparent' }}>{text}</Text>}
             </View>
         </TouchableOpacity>
