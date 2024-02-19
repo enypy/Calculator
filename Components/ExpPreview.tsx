@@ -33,7 +33,7 @@ export default function ExpPreview() {
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View style={styles.container}>
-                <Text numberOfLines={1} style={styles.txt}>{prettierExp + algebraicExp.currentExp}</Text>
+                <Text numberOfLines={1} style={styles.txt}>{prettierExp + (algebraicExp.equalPreviouslyPressed && algebraicExp.currentExp)}</Text>
             </View>
         </ScrollView>
     )
